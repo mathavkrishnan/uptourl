@@ -23,11 +23,8 @@
 <form method="POST">
 {% csrf_token %}
 <div id="formurl">
-<input type="url" value="{{short_url}}" name="url" placeholder="Enter the link here" required>
+<input id="myInput" type="url" value="{{short_url}}" name="url" placeholder="Enter the link here" required>
 <div id="formbutton">
-   {% if short_url %}
-   <input type="submit" value="Copy">
-   {%endif%}
    {% if not short_url %}
    <input type="submit" value="Shorten URL">
    {%endif%}
